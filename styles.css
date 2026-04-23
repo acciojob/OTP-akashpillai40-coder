@@ -1,1 +1,53 @@
 /*  your css code here. If applicable */
+#main{
+	width:90%;
+	height:70%;
+	border:1.2px solid black;
+	padding:20px;
+	border-radius:15px;
+}
+#verification_heading{
+	font-weight:100;
+	text-align:center;
+}
+#verification_subtext{
+	font-family: Bebas Neue, sans-serif;
+	font-weight:100;
+	text-align:center;
+	margin: 20px 10px;
+	font-size:10px;
+}
+.code-container{
+	display: flex;
+	gap: 10px;
+	justify-content: center;	
+	margin-top:20px;
+}
+.code{
+	width:70px;
+	height:80px;
+	margin-right:20px;
+	box-sizing:border-box;
+	padding:30px;
+
+	border:0.5px solid black;
+	border-radius:8px;
+	outline:none;
+}
+.code:focus {
+  border-color: #007bff;
+}
+.warning{
+	text-align:center;
+	background-color:lightgray;
+	padding:20px;
+	margin:10px;
+
+	font-family: Bebas Neue, sans-serif;
+	font-weight:100;
+}
+.code-container ::placeholder{
+	font-size: 17px;
+	color: black;2
+}
+
