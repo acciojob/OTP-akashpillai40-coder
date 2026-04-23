@@ -1,36 +1,33 @@
-//your JS code here. If required.
 let codes = document.querySelectorAll(".code");
 
-//codes[0].focus();
-//add event
+document.addEventListener("DOMContentLoaded", () => {
+  //codes[0].focus();
+});
+
 codes.forEach((input, index) => {
-	input.addEventListener("input", (e) => {
-		let value = e.target.value;
 
-		if (!/^[0-9]$/.test(value)) {
-         input.value = "";
-          return;
-        }
+  input.addEventListener("input", (e) => {
+    let value = e.target.value;
 
-		//Jump to nxt box
-		if(value && index < codes.length - 1){
-			codes[index + 1].focus();
-		}
-	});
-	input.addEventListener("keydown", (e) => {
-
-    // BACKSPACE behavior
-    if (e.key === "Backspace") {
-
-      // if current box empty → go to previous
-      if (input.value === "" && index > 0) {
-        codes[index - 1].focus();
-      } else {
-        // delete current value
-        input.value = "";
-      }
+    if (!/^[0-9]$/.test(value)) {
+      input.value = "";
+      return;
     }
 
+    if (value && index < codes.length - 1) {
+      codes[index + 1].focus();
+    }
   });
-	
-})
+///Backspace logic
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace") {
+
+      if (index > 0) {
+        codes[index - 1].focus();
+        codes[index - 1].value = "";
+      }
+
+    }
+  });
+
+});
