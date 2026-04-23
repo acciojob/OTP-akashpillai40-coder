@@ -1,7 +1,7 @@
 let codes = document.querySelectorAll(".code");
 
 document.addEventListener("DOMContentLoaded", () => {
-  //codes[0].focus();
+  codes[0].focus();
 });
 
 codes.forEach((input, index) => {
